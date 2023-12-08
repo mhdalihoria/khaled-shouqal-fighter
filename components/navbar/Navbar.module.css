@@ -1,0 +1,19 @@
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px); /* Adjust the blur amount as desired */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  background-color: rgba(0, 0, 0, 0.384); /* Adjust the background color and transparency */
+  z-index: 9999; /* Ensure the navbar appears above other elements */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
