@@ -1,0 +1,5 @@
+.container {
+  width: 100%;
+  background: red;position: relative; /* Ensure z-index works by establishing a stacking context */
+  z-index: 2;
+}

@@ -1,0 +1,13 @@
+.servicesSectionContainer {
+  width: 100%;
+}
+.servicesContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.servicesItem {
+    text-align: center;
+    margin: 1rem;
+}

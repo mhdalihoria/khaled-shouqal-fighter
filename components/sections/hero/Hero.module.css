@@ -1,9 +1,41 @@
 .heroContainer {
-    width: 100%;
-    max-height: 800px;
+  position: relative;
 }
 
-.heroBg {
-    width: 100%;
-    object-fit: cover;
+.heroBgContainer {
+  position: relative;
+  overflow: hidden;
+  height: 600px; /* Adjust the height as needed */
 }
+
+.heroBgImg {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.heroContentContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.heroContentTitle{
+  font-size: 2rem;
+}
+
+.heroContentParagraph{
+  font-size: 1rem;
+  max-width: 450px;
+}
+

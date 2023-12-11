@@ -10,7 +10,7 @@ const Navbar = () => {
       <navbar className={styles.navbar}>
         <Image src={Logo} alt="Khaled-Shouqal-Logo" width={200} height={100} />
 
-        <Button sx={{ color: "#fd3c3d" }} variant="contained">
+        <Button color="primary" variant="contained">
           contact me
         </Button>
       </navbar>
