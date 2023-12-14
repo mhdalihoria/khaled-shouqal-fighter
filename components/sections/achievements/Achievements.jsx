@@ -6,39 +6,106 @@ import Image from "next/image";
 
 const Achievements = () => {
   const theme = useTheme();
+
+  const gridTitleStyle = {
+    color: theme.palette.primary.main,
+    textAlign: "center",
+    marginBottom: "1rem",
+  };
+  const gridItemStyle = {
+    color: "red",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+    margin: "1rem",
+    fontSize: "1.rem"
+  };
   return (
     <section className={styles.achievementsContainer}>
       <Grid container className={styles.achievementsContentContainer}>
         <Grid item xs={12}>
-          <h1
-            style={{ color: theme.palette.primary.main, textAlign: "center" }}
-          >
+          <h1 style={gridTitleStyle}>
             Coaching Diplomas In Muay Thai From Thailand 2018:
           </h1>
         </Grid>
 
         <Grid item xs={12} sm={12} md={6}>
-          <div
-            style={{
-              color: "red",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
-            {/* <i className="fa-solid fa-file-certificate" /> */}
+          <div style={gridItemStyle}>
             <Image
               src={GreetingsLogo}
               alt="greetings logo"
-              width={20}
-              height={20}
-              style={{
-                filter:
-                  "hue-rotate(0deg) brightness(100%) contrast(100%) saturate(100%) invert(0%) sepia(0%)",
-                filter: "drop-shadow(0px 0px 5px #e13435)",
-              }}
+              width={30}
+              height={30}
             />
-            <p>Certified Muay Boran Trainer</p>
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <div style={gridItemStyle}>
+            <Image
+              src={GreetingsLogo}
+              alt="greetings logo"
+              width={30}
+              height={30}
+            />
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <div style={gridItemStyle}>
+            <Image
+              src={GreetingsLogo}
+              alt="greetings logo"
+              width={30}
+              height={30}
+            />
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <div style={gridItemStyle}>
+            <Image
+              src={GreetingsLogo}
+              alt="greetings logo"
+              width={30}
+              height={30}
+            />
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <div style={gridItemStyle}>
+            <Image
+              src={GreetingsLogo}
+              alt="greetings logo"
+              width={30}
+              height={30}
+            />
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <div style={gridItemStyle}>
+            <Image
+              src={GreetingsLogo}
+              alt="greetings logo"
+              width={30}
+              height={30}
+            />
+            <p style={{ color: theme.palette.text.secondary }}>
+              Certified Muay Boran Trainer
+            </p>
           </div>
         </Grid>
       </Grid>

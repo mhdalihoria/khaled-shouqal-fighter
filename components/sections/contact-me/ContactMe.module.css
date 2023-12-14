@@ -1,0 +1,26 @@
+.contactMeContainer {
+  margin: 6rem auto;
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+}
+
+.phoneContainer {
+  /* position: absolute;
+  bottom: 0;
+  right: 14rem; */
+}
+
+.socialBtnsContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialBtnsContainer Button {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
