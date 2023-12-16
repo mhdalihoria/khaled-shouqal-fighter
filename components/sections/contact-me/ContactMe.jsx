@@ -77,7 +77,7 @@ const ContactMe = () => {
         }}
       >
         <Grid container>
-          <Grid item sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <Typography
               variant="h4"
               align="center"
