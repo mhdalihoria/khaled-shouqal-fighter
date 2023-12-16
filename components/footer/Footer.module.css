@@ -2,3 +2,21 @@
   width: 100%;
   z-index: 2;
 }
+
+.centerGridItem {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.spacebetweenGridItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flexEndGridItem {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
