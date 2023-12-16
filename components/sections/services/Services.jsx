@@ -28,47 +28,32 @@ const Services = () => {
       >
         <Grid item xs={12} sm={6} md={3} lg={3}>
           <div className={styles.servicesItem}>
-            <Image
-              src={Punch}
-              alt="muay thai greeting"
-              width={100}
-              height={100}
-            />
-            <p style={serviceTitleStyled}>Traditional Muay Thai</p>
+            <Image src={Punch} alt="muay thai punch" width={100} height={100} />
+            <p style={serviceTitleStyled}>Learn To Punch Hard</p>
           </div>
         </Grid>
 
         <Grid item xs={12} sm={6} md={3} lg={3}>
           <div className={styles.servicesItem}>
-            <Image
-              src={Elbow}
-              alt="muay thai greeting"
-              width={100}
-              height={100}
-            />
-            <p style={serviceTitleStyled}>Traditional Muay Thai</p>
+            <Image src={Elbow} alt="muay thai elbow" width={100} height={100} />
+            <p style={serviceTitleStyled}>Throw Perfect Elbows</p>
           </div>
         </Grid>
         <Grid item xs={12} sm={6} md={3} lg={3}>
           <div className={styles.servicesItem}>
-            <Image
-              src={Kick}
-              alt="muay thai greeting"
-              width={100}
-              height={100}
-            />
-            <p style={serviceTitleStyled}>Traditional Muay Thai</p>
+            <Image src={Kick} alt="muay thai kick" width={100} height={100} />
+            <p style={serviceTitleStyled}>Throw Most Brutal Kicks </p>
           </div>
         </Grid>
         <Grid item xs={12} sm={6} md={3} lg={3}>
           <div className={styles.servicesItem}>
             <Image
               src={Clothes}
-              alt="muay thai greeting"
+              alt="muay thai clothes"
               width={100}
               height={100}
             />
-            <p style={serviceTitleStyled}>Traditional Muay Thai</p>
+            <p style={serviceTitleStyled}>Get Traditional Clothes </p>
           </div>
         </Grid>
       </Grid>

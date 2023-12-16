@@ -10,9 +10,15 @@
 }
 
 .achievementsContentContainer {
-    margin: 4rem;
-    padding: 2rem;
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 5px;
+  margin: 4rem;
+  padding: 3rem;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .achievmentsTitle {
+    font-size: 2rem;
+  }
 }

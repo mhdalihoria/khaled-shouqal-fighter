@@ -72,10 +72,7 @@ const PrivateServices = () => {
             // Enterprise card is full width at sm breakpoint
             <Grid item key={tier.title} xs={12} sm={12} md={6}>
               <Card
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                }}
+                className={styles.serviceCard}
               >
                 <CardHeader
                   title={tier.title}

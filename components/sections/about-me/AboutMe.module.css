@@ -6,3 +6,15 @@
   width: 80%;
   margin: 0 auto;
 }
+
+.aboutMeImgContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 883px) {
+  .aboutMeImgContainer {
+    justify-content: center;
+  }
+}

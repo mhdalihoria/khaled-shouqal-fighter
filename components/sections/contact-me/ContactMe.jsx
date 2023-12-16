@@ -18,7 +18,7 @@ const ContactMe = () => {
   const [screenWidth, setScreenWidth] = useState();
   const [hidePhone, setHidePhone] = useState();
   const phoneRef = useParallax({
-    translateY: [50, -600, "easeInQuad"],
+    translateY: [50, -300, "easeInQuad"],
   });
 
   useEffect(() => {

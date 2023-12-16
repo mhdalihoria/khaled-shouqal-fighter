@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import heroBg from "@/public/imgs/hero-bg.jpg";
+import heroBg from "@/public/imgs/hero-bg.png";
 import svg from "@/public/imgs/thai-clothes.svg";
-import { Button, useTheme } from "@mui/material";
+import { Button, useTheme, Typography } from "@mui/material";
 
 const Hero = () => {
   const theme = useTheme();
@@ -20,19 +20,28 @@ const Hero = () => {
         />
       </section>
       <section className={styles.heroContentContainer}>
-        <h1
-          style={{ color: theme.palette.text.primary }}
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
           className={styles.heroContentTitle}
         >
-          Lorem ipsum dolor sit amet 
-        </h1>
-        <p
-          style={{ color: theme.palette.text.secondary }}
+          Ready To Become The Champion You Always Dreamed Of?
+        </Typography>
+        <Typography
+          component="h1"
+          variant="h6"
+          align="center"
+          color="text.secondary"
+          gutterBottom
           className={styles.heroContentParagraph}
         >
-          adipisicing elit. Praesentium eligendi exercitationem maxime in harum
-          iure possimus animi, similique
-        </p>
+          Kick-Start Your Martial Arts Journey To Learn Cool And Practical
+          Disciplines
+        </Typography>
+
         <Button variant="contained" color="primary">
           Read More
         </Button>

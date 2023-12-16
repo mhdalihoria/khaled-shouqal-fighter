@@ -1,0 +1,11 @@
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+@media (max-width: 882px) {
+  .serviceCard {
+    height: auto;
+  }
+}
