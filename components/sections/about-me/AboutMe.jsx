@@ -25,47 +25,49 @@ const AboutMe = () => {
       className={styles.aboutMeContainer}
       style={{ background: theme.palette.background.paper }}
     >
-      <Grid container className={styles.aboutMeContentContainer}>
-        <Grid item xm={12} sm={12} md={6} lg={6}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "start",
-              flexDirection: "column",
-              height: "100%",
-              marginBottom: "4rem",
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h3"
-              color="text.primary"
-              gutterBottom
+      <div className={styles.aboutMeContentContainer}>
+        <Grid container>
+          <Grid item xm={12} sm={12} md={6} lg={6}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "start",
+                flexDirection: "column",
+                height: "100%",
+                marginBottom: "4rem",
+              }}
             >
-              Who Am I?
-            </Typography>
-            <Typography component="p" color="text.secondary">
-              My name is Khaled Shouqal. A Certified Muay Thai from Thailand
-              with the following disciplines (2018): <br />
-              {disciplineElement}. <br />I have been training and competing for
-              over 10 years, guided many skilled fighters to be national and
-              international champions and will continue to do so for as long as
-              I live!
-            </Typography>
-          </div>
+              <Typography
+                component="h1"
+                variant="h3"
+                color="text.primary"
+                gutterBottom
+              >
+                Who Am I?
+              </Typography>
+              <Typography component="p" color="text.secondary">
+                My name is Khaled Shouqal. A Certified Muay Thai from Thailand
+                with the following disciplines (2018): <br />
+                {disciplineElement}. <br />I have been training and competing
+                for over 10 years, guided many skilled fighters to be national
+                and international champions and will continue to do so for as
+                long as I live!
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item xm={12} sm={12} md={6} lg={6}>
+            <div className={styles.aboutMeImgContainer}>
+              <Image
+                src={AboutMeImg}
+                alt="picture of coach"
+                width={220}
+                height={250}
+              />
+            </div>
+          </Grid>
         </Grid>
-        <Grid item xm={12} sm={12} md={6} lg={6}>
-          <div className={styles.aboutMeImgContainer}>
-            <Image
-              src={AboutMeImg}
-              alt="picture of coach"
-              width={220}
-              height={250}
-            />
-          </div>
-        </Grid>
-      </Grid>
+      </div>
     </section>
   );
 };
