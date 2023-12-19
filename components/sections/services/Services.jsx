@@ -10,22 +10,27 @@ import { useInView, animated } from "@react-spring/web";
 
 const Services = () => {
   const theme = useTheme();
-  const [ref, springs] = useInView(() => ({
-    from: {
-      opacity: 0,
-      y: 100,
-    },
-    to: {
-      opacity: 1,
-      y: 0,
-    },
-  }));
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      once: true,
+    }
+  );
 
   const serviceTitleStyled = {
     color: theme.palette.text.secondary,
     marginTop: "1rem",
   };
-  
+
   const servicesArr = [
     {
       title: "Learn To Punch Hard",
@@ -50,7 +55,7 @@ const Services = () => {
   ];
 
   const servicesElements = servicesArr.map((service) => (
-    <Grid item xs={12} sm={6} md={3} lg={3} key={"title"}>
+    <Grid item xs={12} sm={6} md={3} lg={3} key={service.title}>
       <animated.div className={styles.servicesItem} ref={ref} style={springs}>
         <Image src={service.src} alt={service.alt} width={100} height={100} />
         <p style={serviceTitleStyled}>{service.title}</p>
