@@ -13,13 +13,19 @@ import styles from "./ContactMe.module.css";
 import phone from "@/public/imgs/phone.png";
 import qrcode from "@/public/imgs/qr-code.svg";
 import { useParallax } from "react-scroll-parallax";
+import { useRouter } from "next/router";
 
 const ContactMe = () => {
+  const router = useRouter();
   const [screenWidth, setScreenWidth] = useState();
   const [hidePhone, setHidePhone] = useState();
   const phoneRef = useParallax({
     translateY: [50, -300, "easeInQuad"],
   });
+
+  const redirectLink = (link) => {
+    router.push(link);
+  };
 
   useEffect(() => {
     function handleResize() {
@@ -106,11 +112,27 @@ const ContactMe = () => {
               {/* <div className={styles.socialBtnsContainer}> */}
               <Grid item>
                 <div className={styles.socialBtnsContainer}>
-                  <Button variant="contained" sx={{ background: "#C13584" }}>
+                  <Button
+                    variant="contained"
+                    sx={{ background: "#C13584" }}
+                    onClick={() =>
+                      redirectLink(
+                        "https://www.instagram.com/khaled_shouqal_fighter/"
+                      )
+                    }
+                  >
                     <i className="fa-brands fa-instagram" />
                     Instagram
                   </Button>
-                  <Button variant="contained" sx={{ background: "#1877F2" }}>
+                  <Button
+                    variant="contained"
+                    sx={{ background: "#1877F2" }}
+                    onClick={() =>
+                      redirectLink(
+                        "https://www.facebook.com/profile.php?id=100033912616897&ref=xav_ig_profile_web"
+                      )
+                    }
+                  >
                     <i className="fa-brands fa-square-facebook" />
                     Facebook
                   </Button>

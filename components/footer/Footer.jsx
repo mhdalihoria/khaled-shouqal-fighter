@@ -2,11 +2,18 @@ import React from "react";
 import { Grid, useTheme, Button, useMediaQuery } from "@mui/material";
 import styles from "./Footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/public/imgs/light-logo.svg";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const router = useRouter();
   const theme = useTheme();
   const mdBreakPoint = useMediaQuery(theme.breakpoints.up("md"));
+
+  const redirectLink = (link) => {
+    router.push(link);
+  };
 
   return (
     <footer
@@ -44,13 +51,32 @@ const Footer = () => {
               !mdBreakPoint ? styles.centerGridItem : styles.flexEndGridItem
             }
           >
-            <Button variant="text">
+            <Button
+              variant="text"
+              onClick={() =>
+                redirectLink(
+                  "https://www.instagram.com/khaled_shouqal_fighter/"
+                )
+              }
+            >
               <i className="fa-brands fa-square-instagram" />
             </Button>
-            <Button variant="text">
+            <Button
+              variant="text"
+              onClick={() =>
+                redirectLink(
+                  "https://www.facebook.com/profile.php?id=100033912616897"
+                )
+              }
+            >
               <i className="fa-brands fa-square-facebook" />
             </Button>
-            <Button variant="text">
+            <Button
+              variant="text"
+              onClick={() =>
+                redirectLink("https://www.tiktok.com/@khaledshouqalofficial")
+              }
+            >
               <i className="fa-brands fa-tiktok" />
             </Button>
           </div>
@@ -64,7 +90,13 @@ const Footer = () => {
           marginTop: "1rem",
         }}
       >
-        © 2023 Khaled Shouqual Fighter, All Rights Reserved.
+        <span>© 2023 Khaled Shouqual Fighter | Powered By: </span>
+        <Link
+          href="https://www.facebook.com/profile.php?id=61554796709141"
+          style={{ color: theme.palette.text.primary }}
+        >
+          Mhd Ali Houria
+        </Link>
       </div>
     </footer>
   );
