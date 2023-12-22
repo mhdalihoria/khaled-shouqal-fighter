@@ -5,6 +5,7 @@ import Image from "next/image";
 import heroBg from "@/public/imgs/hero-bg.png";
 import svg from "@/public/imgs/thai-clothes.svg";
 import { Button, useTheme, Typography, useMediaQuery } from "@mui/material";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const theme = useTheme();
@@ -16,9 +17,7 @@ const Hero = () => {
   });
 
   return (
-    <section
-      className={styles.heroContainer}
-    >
+    <section className={styles.heroContainer}>
       <section className={styles.heroBgContainer}>
         <Image
           src={heroBg}
@@ -53,10 +52,12 @@ const Hero = () => {
           Kick-Start Your Martial Arts Journey To Learn Cool And Practical
           Disciplines
         </Typography>
-
-        <Button variant="contained" color="primary">
-          Read More
-        </Button>
+        
+        <Link to="contact-me" smooth duration={1000}>
+          <Button variant="contained" color="primary">
+            Start Today
+          </Button>
+        </Link>
       </animated.section>
     </section>
   );
