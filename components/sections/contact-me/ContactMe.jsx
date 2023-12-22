@@ -54,7 +54,7 @@ const ContactMe = () => {
   }, [screenWidth]);
 
   return (
-    <section className={styles.contactMeContainer}>
+    <section className={styles.contactMeContainer} id="contact-me">
       <Container
         disableGutters
         maxWidth="sm"

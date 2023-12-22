@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import styles from "./PrivateServices.module.css";
 import { useInView, animated } from "@react-spring/web";
+import { Link } from "react-scroll";
 
 const PrivateServices = () => {
   const theme = useTheme();
@@ -126,9 +127,16 @@ const PrivateServices = () => {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
-                    {tier.buttonText}
-                  </Button>
+                  <Link
+                    to="contact-me"
+                    smooth
+                    duration={500}
+                    style={{ width: "100%" }}
+                  >
+                    <Button fullWidth variant={tier.buttonVariant}>
+                      {tier.buttonText}
+                    </Button>
+                  </Link>
                 </CardActions>
               </Card>
             </Grid>
