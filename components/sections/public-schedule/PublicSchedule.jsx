@@ -41,7 +41,12 @@ const PublicSchedule = () => {
   ];
 
   return (
-    <animated.section className={styles.publicContainer} ref={ref} style={fade}>
+    <animated.section
+      className={styles.publicContainer}
+      ref={ref}
+      style={fade}
+      id="sessions"
+    >
       <Container
         disableGutters
         maxWidth="sm"

@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme, Grid, Typography } from "@mui/material";
 import styles from "./AboutMe.module.css";
 import Image from "next/image";
-import AboutMeImg from "@/public/imgs/about-me.png";
+import AboutMeImg from "@/public/imgs/about-me.jpg";
 import { useInView, animated } from "@react-spring/web";
 
 const AboutMe = () => {
@@ -53,6 +53,7 @@ const AboutMe = () => {
     <section
       className={styles.aboutMeContainer}
       style={{ background: theme.palette.background.paper }}
+      id="about-me"
     >
       <div className={styles.aboutMeContentContainer}>
         <Grid container>
@@ -96,8 +97,9 @@ const AboutMe = () => {
               <Image
                 src={AboutMeImg}
                 alt="picture of coach"
-                width={220}
+                width={250}
                 height={250}
+                style={{ objectFit: "cover", borderRadius: "100%" }}
               />
             </animated.div>
           </Grid>
