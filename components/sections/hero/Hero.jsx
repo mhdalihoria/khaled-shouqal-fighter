@@ -2,7 +2,7 @@ import React from "react";
 import { useSpring, animated } from "@react-spring/web";
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import heroBg from "@/public/imgs/hero-bg.png";
+import heroBg from "@/public/imgs/hero-bg.webp";
 import svg from "@/public/imgs/thai-clothes.svg";
 import { Button, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { Link } from "react-scroll";

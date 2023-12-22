@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import styles from "./ContactMe.module.css";
-import phone from "@/public/imgs/phone.png";
+import phone from "@/public/imgs/phone.webp";
 import qrcode from "@/public/imgs/qr-code.svg";
 import { useParallax } from "react-scroll-parallax";
 import { useRouter } from "next/router";
