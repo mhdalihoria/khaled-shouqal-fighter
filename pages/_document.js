@@ -17,6 +17,7 @@ export default function Document() {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+        <link rel="shortcut icon" href="/imgs/favicon.ico" />
       </Head>
       <body>
         <Main />
