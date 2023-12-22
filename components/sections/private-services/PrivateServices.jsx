@@ -12,9 +12,25 @@ import {
   CardActions,
 } from "@mui/material";
 import styles from "./PrivateServices.module.css";
+import { useInView, animated } from "@react-spring/web";
 
 const PrivateServices = () => {
   const theme = useTheme();
+  const [ref, fade] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+      config: { duration: "400" },
+    }),
+    { once: true }
+  );
+
   const tiers = [
     {
       title: "Kickboxing",
@@ -40,7 +56,11 @@ const PrivateServices = () => {
     },
   ];
   return (
-    <section className={styles.privateContainer}>
+    <animated.section
+      className={styles.privateContainer}
+      ref={ref}
+      style={fade}
+    >
       <Container
         disableGutters
         maxWidth="sm"
@@ -71,9 +91,7 @@ const PrivateServices = () => {
           {tiers.map((tier) => (
             // Enterprise card is full width at sm breakpoint
             <Grid item key={tier.title} xs={12} sm={12} md={6}>
-              <Card
-                className={styles.serviceCard}
-              >
+              <Card className={styles.serviceCard}>
                 <CardHeader
                   title={tier.title}
                   subheader={tier.subheader}
@@ -117,7 +135,7 @@ const PrivateServices = () => {
           ))}
         </Grid>
       </Container>
-    </section>
+    </animated.section>
   );
 };
 

@@ -10,8 +10,24 @@ import {
   Button,
 } from "@mui/material";
 import styles from "./PublicSchedule.module.css";
+import { useInView, animated } from "@react-spring/web";
 
 const PublicSchedule = () => {
+  const [ref, fade] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+      config: { duration: "300" },
+    }),
+    { once: true }
+  );
+
   const rows = [
     {
       gymName: "Gym Moala",
@@ -25,7 +41,7 @@ const PublicSchedule = () => {
   ];
 
   return (
-    <section className={styles.publicContainer}>
+    <animated.section className={styles.publicContainer} ref={ref} style={fade}>
       <Container
         disableGutters
         maxWidth="sm"
@@ -130,7 +146,7 @@ const PublicSchedule = () => {
           </TableBody>
         </Table>
       </Container>
-    </section>
+    </animated.section>
   );
 };
 
